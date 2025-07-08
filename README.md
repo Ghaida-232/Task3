@@ -37,7 +37,7 @@
 
 ## Project Structure
 
-
+```text
 /content                     # Notebook files section
 ├── Task3/                   # GitHub repo folder in Colab
 │   ├── README.md            # This file
