@@ -35,6 +35,24 @@
 
 ## Project Structure
 
+## Project Structure
+
+
+/content                     # Notebook files section
+├── Task3/                   # GitHub repo folder in Colab
+│   ├── README.md            # This file
+│   └── Training_task3.ipynb # Colab notebook
+├── task3/                   # Dataset splits' folder in Colab
+│   ├── all_data/            # Unzipped original dataset
+│   ├── train/               # 70% training split
+│   ├── val/                 # 15% validation split
+│   └── test/                # 15% test split
+├── emotion_model.h5         # Best‐saved Keras model (at /content/emotion_model.h5)
+/drive/                      # Mounted Google Drive
+│   └── MyDrive/
+│       └── archive.zip      # Original FER2013 ZIP from Kaggle
+└── sample_data/             # Colab’s default sample folder
+
 ## How to Run
 
 ## References
