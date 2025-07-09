@@ -50,10 +50,14 @@ These preprocessing guarantee that the model sees consistent, well-scaled inputs
   
 Even after spliting the data in (70/15/15) the dataset remains highly imbalanced, the “happy” class has over 5,500 training images, while “disgust” has only around 300 and “surprise” about 2,500. This heavy skew means the model will see far more happy faces during training and consequently predict it more often, we handle later using class weights (more correction and training whould lead to better results)
 
+- Class Distribution of train dataset (pie chart)
+
 ![image](https://github.com/user-attachments/assets/1d4fee87-0261-4856-8a7f-8ecde47c48d1)
 
 Here we can see a clear view of the train dataset class distribution, the top three classes (Happy 25% + Neutral 17.3% + Sad 17%) together are nearly 60% of the data ,“Fear” is 14.3% .
 while “Disgust” is only 1.5% and “Surprise” just 11.2%.
+
+- Class Distribution of validation and test datasets (pie chart)
 
 ![image](https://github.com/user-attachments/assets/4a29c4c7-d153-49c7-bbe3-3d8a89dda394)
 
