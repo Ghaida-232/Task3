@@ -189,19 +189,24 @@ Looking at the 10 examples above:
 ## 9. How to Run
 
 1.Install dependencies (requirements include TensorFlow, scikit-learn, matplotlib, seaborn, etc.)
+
 pip install -r requirements.txt
 
 2.Prepare the data
 Download the FER-2013 dataset (archive.zip) from Kaggle. Save that file into drive (if using Colab) or into a local data/ folder., then unzip it:
+
 unzip data/archive.zip -d data/fer2013_raw
 
 3.Split into train/val/test then moves and balances images into emotion subfolders.(in colab)
+
 Locally: python prepare_data.py --input_dir data/fer2013_raw --output_dir data --train_frac 0.70 --val_frac 0.15 --test_frac 0.15
 
 4.Train the model, open and run all cells in Training_task3.ipynb.(in colab)
+
 Locally: python train_emotion_model.py --data_dir data --batch_size 64 --epochs 30
 
 5.Evaluate & visualize
+
 python evaluate_model.py --model_path emotion_model.h5 --data_dir data
 
 ## 10. References
