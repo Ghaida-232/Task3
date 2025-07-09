@@ -15,6 +15,7 @@
 ## 2. Image Preprocessing & Augmentation
 
   Data augmentation is a technique to artificially create new training data from existing training data. This is done by applying domain-specific techniques to examples from the training data that create new and different training examples and involves creating transformed versions of images in the training dataset that belong to the same class as the original image. Transforms include a range of operations from the field of image manipulation, such as shifts, flips, zooms, and much more. Image data augmentation is typically only applied to the training dataset, and not to the validation or test dataset.[2]
+  
 
 **2.1 Augmentation**
 
@@ -27,6 +28,7 @@ Here we apply the augmentation on our train data (in train folder) by the follow
 - Horizontal Flip: makes orientation-invariant
 - Brightness (70–130%): covers different lighting in the images
 - fill_mode='reflect': fills in new pixels (may caused by rotation or zoom) by reflecting the image border.
+
 
 **2.2 Image Preprocessing**
 
@@ -44,6 +46,13 @@ These preprocessing guarantee that the model sees consistent, well-scaled inputs
 ## Data Visualization
 - Class Distribution
   ![image](https://github.com/user-attachments/assets/a14b4269-4739-453f-bff2-a56d1f90ad5e)
+
+  
+Even after spliting the data in (70/15/15) the dataset remains highly imbalanced, the “happy” class has over 5,500 training images, while “disgust” has only around 300 and “surprise” about 2,500. This heavy skew means the model will see far more happy faces during training and consequently predict it more often, we handle later using class weights (more correction and training whould lead to better results)
+
+![image](https://github.com/user-attachments/assets/1d4fee87-0261-4856-8a7f-8ecde47c48d1)
+
+Here we can see clear view of the train 
 
 - Sample Images (Original vs. Augmented)
 
@@ -79,7 +88,7 @@ These preprocessing guarantee that the model sees consistent, well-scaled inputs
 │   └── MyDrive/
 │       └── archive.zip      # Original FER2013 ZIP from Kaggle
 └── sample_data/             # Colab’s default sample folder
-
+```
 ## How to Run
 
 ## References
