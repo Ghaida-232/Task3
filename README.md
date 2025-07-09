@@ -43,7 +43,7 @@ These preprocessing guarantee that the model sees consistent, well-scaled inputs
 
 
   
-## Data Visualization
+## 3. Data Visualization
 - Class Distribution
   ![image](https://github.com/user-attachments/assets/a14b4269-4739-453f-bff2-a56d1f90ad5e)
 
@@ -74,7 +74,7 @@ This how we applied the class weights to enhance the classes' balance
 
 Here is an examples of original and augmented images side by side for three emotion classes fear, happy, and surprise. Each row shows the original 48×48 grayscale face followed by four augmented variants, each applying small rotations (±15°), zoom shifts (±10%), shears (±20%), horizontal flips, and brightness adjustments (70–130%). These transformations simulate changes in pose, scale, slant, orientation, and lighting while preserving the core expression, helping the model learn to recognize emotions under varied real-world conditions.
 
-## CNN Model Architecture
+## 4. CNN Model Architecture
 
 
 ![image](https://github.com/user-attachments/assets/bca1a5b7-3d5b-4cd8-a902-d5bec1717d3f)
@@ -88,7 +88,7 @@ Our model is a straightforward convolutional neural network (CNN):
 This structure lets the network learn low-level patterns (edges, textures) in early layers, build up to high-level features (facial expressions) and then decide which of the seven emotions is most likely.
 
 
-## Training Strategy
+## 5. Training Strategy
 
 ![image](https://github.com/user-attachments/assets/4573149f-79d7-40cb-9bc6-5bc6fa3cb147)
 
@@ -104,7 +104,7 @@ Optimizer / Loss:
 - **ReduceLROnPlateau**: lowers the learning rate when validation loss doesn’t improve, so the model can continue learning.
 
 - 
-## Evaluation Metrics
+## 6. Evaluation Metrics
 
 - Classification Report and accuracy / F1-Score
   
@@ -145,7 +145,7 @@ Confusion Matrix Insights:
 Clear and common emotions (happy, surprise) are handled well but rare ones (fear, disgust, angry) still need extra examples or special training to improve.  
 
 
-## Prediction Samples
+## 7. Prediction Samples
 
 ![image](https://github.com/user-attachments/assets/64b9b119-fdeb-41ef-8413-f1efbc32d339)
 
@@ -162,7 +162,7 @@ Looking at the 10 examples above:
   - **Happy → Sad**: the eys shape may get model confuse also the face shown from the side
 
 
-## Project Structure
+## 8. Project Structure
 
 ```text
 /content                     # Notebook files section
@@ -181,7 +181,7 @@ Looking at the 10 examples above:
 └── sample_data/             # Colab’s default sample folder
 ```
 
-## How to Run
+## 9. How to Run
 
 1.Install dependencies (requirements include TensorFlow, scikit-learn, matplotlib, seaborn, etc.)
 pip install -r requirements.txt
@@ -199,8 +199,9 @@ Locally: python train_emotion_model.py --data_dir data --batch_size 64 --epochs 
 5.Evaluate & visualize
 python evaluate_model.py --model_path emotion_model.h5 --data_dir data
 
-## References
+## 10. References
 
 **The dataset used in this task:** https://www.kaggle.com/datasets/msambare/fer2013 [1].
+
 **Data augmentation concept:** https://machinelearningmastery.com/how-to-configure-image-data-augmentation-when-training-deep-learning-neural-networks/ [2].
 
