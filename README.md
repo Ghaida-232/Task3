@@ -68,7 +68,8 @@ And for the validation and test datasets, their class distribution are identical
 
 All these visualizations reveals imbalances in the data samples which gives us a better view of the possible solutions such as applying class weights to produce more balanced training process that whould improve the model performence.
 
-![image](https://github.com/user-attachments/assets/817e66fb-2fdc-4d61-97c0-f5c98668ada5)
+![image](https://github.com/user-attachments/assets/0d0bb5f8-4c24-4016-9a0f-ca4a6986e074)
+
 
 This how we applied the class weights to enhance the classes' balance 
 
